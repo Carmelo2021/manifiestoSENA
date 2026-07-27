@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curiosidades | Manifiesto SENA</title>
+  <style>
+    :root {
+      --sena-verde: #39a900;
+      --sena-verde-oscuro: #2d7f00;
+      --gris-suave: #f4f7f5;
+      --texto: #1f2937;
+      --blanco: #ffffff;
+      --azul-oscuro: #0f172a;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(180deg, var(--gris-suave), #e8f5e9);
+      color: var(--texto);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: var(--sena-verde);
+      color: var(--blanco);
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 4px 14px rgba(0,0,0,.16);
+    }
+
+    header h1 {
+      font-size: clamp(1.7rem, 3vw, 2.4rem);
+      margin-bottom: .45rem;
+      font-weight: 800;
+    }
+
+    main {
+      width: min(1100px, 93%);
+      margin: 1.8rem auto 2.2rem;
+      flex: 1;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .volver {
+      display: inline-block;
+      text-decoration: none;
+      background: var(--azul-oscuro);
+      color: var(--blanco);
+      padding: .6rem 1rem;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+
+    .card {
+      background: var(--blanco);
+      border-radius: 14px;
+      border-top: 5px solid var(--sena-verde);
+      box-shadow: 0 12px 28px rgba(0,0,0,.09);
+      padding: 1.1rem;
+    }
+
+    h2 {
+      color: var(--sena-verde-oscuro);
+      margin-bottom: .6rem;
+      font-size: 1.24rem;
+    }
+
+    p, li { line-height: 1.6; }
+    ul { padding-left: 1.1rem; display: grid; gap: .45rem; }
+
+    .grid {
+      display: grid;
+      gap: .9rem;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      margin-top: .5rem;
+    }
+
+    .item {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: .85rem;
+    }
+
+    .item h3 {
+      color: #1f5e08;
+      font-size: 1rem;
+      margin-bottom: .35rem;
+    }
+
+    footer {
+      background: var(--azul-oscuro);
+      color: #e2e8f0;
+      text-align: center;
+      padding: 1rem;
+      font-size: .92rem;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Curiosidades de Programación</h1>
+    <p>Respuestas a puzzles, juegos y materiales para aprender de forma práctica y divertida.</p>
+  </header>
+
+  <main>
+    <div>
+      <a class="volver" href="index.html">← Volver al inicio</a>
+    </div>
+
+    <section class="card">
+      <h2>¿Qué encontrarás aquí?</h2>
+      <p>
+        Este espacio reúne recursos para fortalecer el pensamiento lógico y las habilidades de programación.
+        Está pensado para aprendices que quieren practicar fuera del aula con retos y ejercicios aplicados.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Puzzles y retos (con respuestas guiadas)</h2>
+      <ul>
+        <li>Retos de lógica secuencial, condicionales y ciclos.</li>
+        <li>Ejercicios de análisis de problemas paso a paso.</li>
+        <li>Soluciones comentadas para comprender el razonamiento.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Juegos para aprender programación</h2>
+      <div class="grid">
+        <article class="item">
+          <h3>Juegos de lógica</h3>
+          <p>Dinámicas para entrenar patrones, toma de decisiones y resolución de problemas.</p>
+        </article>
+        <article class="item">
+          <h3>Retos por niveles</h3>
+          <p>Actividades desde nivel básico hasta intermedio para avanzar progresivamente.</p>
+        </article>
+        <article class="item">
+          <h3>Aprendizaje colaborativo</h3>
+          <p>Retos diseñados para resolver en pareja o equipo y compartir estrategias.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Materiales recomendados</h2>
+      <ul>
+        <li>Guías de fundamentos de programación y pseudocódigo.</li>
+        <li>Prácticas de algoritmia y estructuras de datos básicas.</li>
+        <li>Plantillas para planear soluciones antes de codificar.</li>
+        <li>Recursos para mejorar lógica computacional y pensamiento crítico.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Próximamente</h2>
+      <p>
+        Publicaremos respuestas detalladas de nuevos puzzles, retos por lenguaje y más recursos interactivos
+        para aprender programación en el contexto ADSO.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 SENA - Curiosidades y recursos de aprendizaje</p>
+  </footer>
+</body>
+</html>
