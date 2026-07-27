@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inicio | Manifiesto SENA</title>
+  <style>
+    :root {
+      --sena-verde: #39a900;
+      --sena-verde-oscuro: #2d7f00;
+      --gris-suave: #f4f7f5;
+      --texto: #1f2937;
+      --blanco: #ffffff;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(180deg, var(--gris-suave), #e8f5e9);
+      color: var(--texto);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: var(--sena-verde);
+      color: var(--blanco);
+      padding: 2rem 1.2rem;
+      text-align: center;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+    }
+
+    header h1 {
+      font-size: clamp(1.8rem, 3vw, 2.6rem);
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1rem;
+      opacity: 0.95;
+    }
+
+    main {
+      width: min(1100px, 92%);
+      margin: 2.2rem auto;
+      flex: 1;
+    }
+
+    .intro {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .intro h2 {
+      font-size: clamp(1.4rem, 2.3vw, 2rem);
+      margin-bottom: 0.6rem;
+      color: var(--sena-verde-oscuro);
+    }
+
+    .intro p {
+      max-width: 760px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .tarjetas {
+      display: grid;
+      gap: 1.4rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      align-items: stretch;
+    }
+
+    .tarjeta {
+      background: var(--blanco);
+      border-radius: 16px;
+      padding: 1.4rem;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      border-top: 6px solid var(--sena-verde);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .tarjeta:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 32px rgba(0, 0, 0, 0.14);
+    }
+
+    .tarjeta h3 {
+      font-size: 1.2rem;
+      margin-bottom: 0.55rem;
+      color: var(--sena-verde-oscuro);
+    }
+
+    .tarjeta p {
+      line-height: 1.55;
+      margin-bottom: 1rem;
+    }
+
+    .btn-enlace {
+      display: inline-block;
+      text-decoration: none;
+      background: var(--sena-verde);
+      color: var(--blanco);
+      padding: 0.7rem 1rem;
+      border-radius: 10px;
+      font-weight: 600;
+      text-align: center;
+      transition: background 0.2s ease;
+    }
+
+    .btn-enlace:hover {
+      background: var(--sena-verde-oscuro);
+    }
+
+    footer {
+      background: #0f172a;
+      color: #e2e8f0;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.92rem;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Servicio Nacional de Aprendizaje - SENA</h1>
+    <p>Formación para el trabajo, la innovación y el desarrollo del país.</p>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h2>Bienvenido(a)</h2>
+      <p>
+        Explora nuestros espacios principales para conocer el talento de los aprendices
+        y profundizar en el programa formativo.
+      </p>
+    </section>
+
+    <section class="tarjetas">
+      <article class="tarjeta">
+        <div>
+          <h3>Proyectos de los aprendices</h3>
+          <p>
+            Descubre iniciativas, desarrollos y propuestas creadas por nuestros aprendices
+            en distintas áreas de formación.
+          </p>
+        </div>
+        <a class="btn-enlace" href="proyectos.html">Ir a Proyectos de los aprendices</a>
+      </article>
+
+      <article class="tarjeta">
+        <div>
+          <h3>Conoce más sobre nuestro programa</h3>
+          <p>
+            Consulta información clave sobre objetivos, metodología y oportunidades
+            que brinda nuestro proceso de formación.
+          </p>
+        </div>
+        <a class="btn-enlace" href="programa.html">Conocer más sobre el programa</a>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 SENA - Página de inicio institucional</p>
+  </footer>
+</body>
+</html>
