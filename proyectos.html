@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Proyectos de los aprendices | Manifiesto SENA</title>
+  <style>
+    :root {
+      --sena-verde: #39a900;
+      --sena-verde-oscuro: #2d7f00;
+      --gris-suave: #f4f7f5;
+      --texto: #1f2937;
+      --blanco: #ffffff;
+      --sombra: 0 12px 28px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(180deg, var(--gris-suave), #e8f5e9);
+      color: var(--texto);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: var(--sena-verde);
+      color: var(--blanco);
+      padding: 2rem 1.2rem;
+      text-align: center;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.16);
+    }
+
+    header h1 {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 0.45rem;
+    }
+
+    header p {
+      opacity: 0.95;
+      font-size: 1rem;
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    main {
+      width: min(1200px, 93%);
+      margin: 2rem auto 2.5rem;
+      flex: 1;
+    }
+
+    .top-actions {
+      display: flex;
+      justify-content: flex-start;
+      margin-bottom: 1.2rem;
+    }
+
+    .volver {
+      display: inline-block;
+      text-decoration: none;
+      background: #0f172a;
+      color: var(--blanco);
+      padding: 0.65rem 1rem;
+      border-radius: 10px;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+
+    .volver:hover {
+      background: #1e293b;
+    }
+
+    .intro {
+      margin-bottom: 1.6rem;
+      text-align: center;
+    }
+
+    .intro h2 {
+      color: var(--sena-verde-oscuro);
+      margin-bottom: 0.45rem;
+      font-size: clamp(1.3rem, 2.4vw, 1.9rem);
+    }
+
+    .intro p {
+      max-width: 820px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    .grid-proyectos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
+      align-items: stretch;
+    }
+
+    .proyecto {
+      background: var(--blanco);
+      border-radius: 14px;
+      border-top: 5px solid var(--sena-verde);
+      box-shadow: var(--sombra);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .proyecto:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 34px rgba(0, 0, 0, 0.14);
+    }
+
+    .proyecto h3 {
+      color: var(--sena-verde-oscuro);
+      font-size: 1.04rem;
+      margin-bottom: 0.55rem;
+      line-height: 1.4;
+    }
+
+    .proyecto p {
+      line-height: 1.55;
+      margin-bottom: 0.9rem;
+      font-size: 0.96rem;
+    }
+
+    .btn-visitar {
+      display: inline-block;
+      text-decoration: none;
+      background: var(--sena-verde);
+      color: var(--blanco);
+      padding: 0.62rem 0.95rem;
+      border-radius: 9px;
+      text-align: center;
+      font-weight: 600;
+      transition: background 0.2s ease;
+    }
+
+    .btn-visitar:hover {
+      background: var(--sena-verde-oscuro);
+    }
+
+    footer {
+      background: #0f172a;
+      color: #e2e8f0;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.92rem;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Proyectos de los aprendices</h1>
+    <p>Conoce soluciones reales creadas por talento SENA en diferentes áreas tecnológicas y de negocio.</p>
+  </header>
+
+  <main>
+    <div class="top-actions">
+      <a class="volver" href="index.html">← Volver al inicio</a>
+    </div>
+
+    <section class="intro">
+      <h2>Explora los proyectos</h2>
+      <p>
+        Cada tarjeta te llevará a una propuesta desarrollada por aprendices.
+        Haz clic y descubre ideas que transforman procesos y comunidades.
+      </p>
+    </section>
+
+    <section class="grid-proyectos">
+      <article class="proyecto">
+        <div>
+          <h3>Plataforma para aprender a programar con Inteligencia Artificial</h3>
+          <p>"Aprende a programar con un asistente de inteligencia artificial que te guía paso a paso, como tener un profesor personal 24 horas."</p>
+        </div>
+        <a class="btn-visitar" href="https://sebistrapo.github.io/ProgramIA/" target="_blank" rel="noopener noreferrer">Explorar proyecto</a>
+      </article>
+
+      <article class="proyecto">
+        <div>
+          <h3>Marketplace del Valle de Aburrá donde puedes contratar servicios de fotografía</h3>
+          <p>"Fotógrafos del Valle de Aburrá, todos en un solo lugar. Encuentra el servicio perfecto para tu evento sin salir de casa."</p>
+        </div>
+        <a class="btn-visitar" href="https://marckosct913.github.io/luxars/" target="_blank" rel="noopener noreferrer">Explorar proyecto</a>
+      </article>
+
+      <article class="proyecto">
+        <div>
+          <h3>Plataforma para contratar servicios de entrenamiento canino</h3>
+          <p>"¿Tu perro necesita entrenamiento? Conecta con expertos caninos y agenda sesiones desde tu celular."</p>
+        </div>
+        <a class="btn-visitar" href="https://eimyruiz.github.io/EDUCAN__/" target="_blank" rel="noopener noreferrer">Explorar proyecto</a>
+      </article>
+
+      <article class="proyecto">
+        <div>
+          <h3>Plataforma para gestionar la atención a los clientes de barberías</h3>
+          <p>"Para barberías: agenda citas, controla clientes y haz crecer tu negocio, todo desde una sola plataforma."</p>
+        </div>
+        <a class="btn-visitar" href="https://jpabloruiz-sketch.github.io/BarberHUB/" target="_blank" rel="noopener noreferrer">Explorar proyecto</a>
+      </article>
+
+      <article class="proyecto">
+        <div>
+          <h3>Gestión integral de bodegas de inventario</h3>
+          <p>"Inventario de bodega sin caos: controla entradas, salidas y stock en tiempo real, desde cualquier dispositivo."</p>
+        </div>
+        <a class="btn-visitar" href="https://jmorenoyepes-ai.github.io/landing-page-INTSHOT/" target="_blank" rel="noopener noreferrer">Explorar proyecto</a>
+      </article>
+
+      <article class="proyecto">
+        <div>
+          <h3>Plataforma para gestionar los eventos deportivos del SENA</h3>
+          <p>"Los eventos deportivos del SENA, organizados: inscripciones, calendarios y resultados, todo en un solo lugar."</p>
+        </div>
+        <a class="btn-visitar" href="https://3e824980-sports-landing-page-heroes.netlify.app/" target="_blank" rel="noopener noreferrer">Explorar proyecto</a>
+      </article>
+
+      <article class="proyecto">
+        <div>
+          <h3>Software para gestión comercial de pequeñas empresas</h3>
+          <p>"Software pensado para pymes: factura, controla ventas y lleva tus finanzas sin complicaciones."</p>
+        </div>
+        <a class="btn-visitar" href="https://samuelpineresrios.github.io/landing-gamora/" target="_blank" rel="noopener noreferrer">Explorar proyecto</a>
+      </article>
+
+      <article class="proyecto">
+        <div>
+          <h3>Red social para comerciantes de Itagüí</h3>
+          <p>"Red social exclusiva para comerciantes de Itagüí: conecta, promociona y haz crecer tu negocio local."</p>
+        </div>
+        <a class="btn-visitar" href="https://samu3215.github.io/Echo/" target="_blank" rel="noopener noreferrer">Explorar proyecto</a>
+      </article>
+
+      <article class="proyecto">
+        <div>
+          <h3>Plataforma para reservas de restaurante</h3>
+          <p>"Reserva tu mesa favorita en segundos: menú digital, horarios disponibles y confirmación inmediata."</p>
+        </div>
+        <a class="btn-visitar" href="https://bryannwww.github.io/LANDING_PAGE/" target="_blank" rel="noopener noreferrer">Explorar proyecto</a>
+      </article>
+
+      <article class="proyecto">
+        <div>
+          <h3>Gestión integral de Spa</h3>
+          <p>"Gestión completa para spas: citas, servicios, clientes y pagos, todo organizado para que tú solo te enfoques en relajar."</p>
+        </div>
+        <a class="btn-visitar" href="https://arebqllon.github.io/SpaDeseolanding/" target="_blank" rel="noopener noreferrer">Explorar proyecto</a>
+      </article>
+
+      <article class="proyecto">
+        <div>
+          <h3>Plataforma empresarial para tapicerías</h3>
+          <p>"Software empresarial para tapicerías: cotiza, agenda y administra pedidos con precisión profesional."</p>
+        </div>
+        <a class="btn-visitar" href="https://juanmanuelraigosavasquez.github.io/KanView/#cotizar" target="_blank" rel="noopener noreferrer">Explorar proyecto</a>
+      </article>
+
+      <article class="proyecto">
+        <div>
+          <h3>Plataforma de búsqueda de experiencias internacionales para aprendices y egresados de Análisis y Desarrollo de Software</h3>
+          <p>"¿Sueñas con estudiar o trabajar en el exterior? Plataforma para que aprendices y egresados de software encuentren experiencias internacionales."</p>
+        </div>
+        <a class="btn-visitar" href="https://padisofi.github.io/vislearn/" target="_blank" rel="noopener noreferrer">Explorar proyecto</a>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 SENA - Vitrina de proyectos de aprendices</p>
+  </footer>
+</body>
+</html>
