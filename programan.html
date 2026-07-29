@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Programa ADSO | Manifiesto SENA</title>
+  <style>
+    :root {
+      --sena-verde: #39a900;
+      --sena-verde-oscuro: #2d7f00;
+      --gris-suave: #f4f7f5;
+      --texto: #1f2937;
+      --blanco: #ffffff;
+      --azul-oscuro: #0f172a;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(180deg, var(--gris-suave), #e8f5e9);
+      color: var(--texto);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: var(--sena-verde);
+      color: var(--blanco);
+      text-align: center;
+      padding: 2rem 1rem;
+      box-shadow: 0 4px 14px rgba(0,0,0,.16);
+    }
+
+    header h1 {
+      font-size: clamp(1.7rem, 3vw, 2.5rem);
+      margin-bottom: .5rem;
+      font-weight: 800;
+    }
+
+    header p { max-width: 920px; margin: 0 auto; line-height: 1.5; }
+
+    main {
+      width: min(1150px, 93%);
+      margin: 1.8rem auto 2.2rem;
+      flex: 1;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .top-actions { margin-bottom: .2rem; }
+
+    .volver {
+      display: inline-block;
+      text-decoration: none;
+      background: var(--azul-oscuro);
+      color: var(--blanco);
+      padding: .62rem 1rem;
+      border-radius: 10px;
+      font-weight: 600;
+    }
+
+    .volver:hover { background: #1e293b; }
+
+    .card {
+      background: var(--blanco);
+      border-radius: 14px;
+      border-top: 5px solid var(--sena-verde);
+      box-shadow: 0 12px 28px rgba(0,0,0,.09);
+      padding: 1.1rem;
+    }
+
+    h2 {
+      color: var(--sena-verde-oscuro);
+      font-size: 1.25rem;
+      margin-bottom: .65rem;
+    }
+
+    p, li { line-height: 1.6; }
+    ul { padding-left: 1.1rem; display: grid; gap: .45rem; }
+
+    .datos-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: .8rem;
+      margin-top: .5rem;
+    }
+
+    .dato {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-radius: 10px;
+      padding: .8rem;
+    }
+
+    .dato h3 {
+      color: var(--sena-verde-oscuro);
+      margin-bottom: .35rem;
+      font-size: 1rem;
+    }
+
+    .dato a {
+      color: var(--sena-verde-oscuro);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .dato a:hover {
+      text-decoration: underline;
+    }
+
+    .dato-destacado {
+      background: #ecfdf3;
+      border: 2px solid var(--sena-verde);
+      box-shadow: 0 10px 22px rgba(57, 169, 0, .18);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .dato-destacado h3 {
+      font-size: 1.32rem;
+      margin-bottom: .5rem;
+    }
+
+    .dato-destacado p,
+    .dato-destacado a {
+      font-size: 1.15rem;
+    }
+
+    @media (min-width: 900px) {
+      .dato-destacado {
+        grid-column: span 2;
+      }
+    }
+
+    .nota {
+      background: #ecfeff;
+      border-left: 4px solid #0891b2;
+      padding: .8rem;
+      border-radius: 8px;
+      margin-top: .7rem;
+      font-size: .95rem;
+    }
+
+    .btn-doc {
+      display: inline-block;
+      text-decoration: none;
+      background: var(--sena-verde);
+      color: var(--blanco);
+      padding: .65rem 1rem;
+      border-radius: 10px;
+      font-weight: 600;
+      margin-top: .3rem;
+    }
+
+    .btn-doc:hover {
+      background: var(--sena-verde-oscuro);
+    }
+
+    .cta-final a {
+      color: var(--sena-verde-oscuro);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .cta-final a:hover { text-decoration: underline; }
+
+    .perfil-intro {
+      margin-bottom: .9rem;
+    }
+
+    .perfil-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: .8rem;
+    }
+
+    .perfil-item {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 4px solid var(--sena-verde);
+      border-radius: 10px;
+      padding: .9rem;
+    }
+
+    .perfil-item h3 {
+      color: var(--sena-verde-oscuro);
+      font-size: 1rem;
+      margin-bottom: .35rem;
+    }
+
+    .perfil-item p {
+      margin: 0;
+    }
+
+    footer {
+      background: var(--azul-oscuro);
+      color: #e2e8f0;
+      text-align: center;
+      padding: 1rem;
+      font-size: .92rem;
+      margin-top: auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Análisis y Desarrollo de Software (ADSO)</h1>
+    <p>
+      Información general del programa tecnológico del SENA: duración, perfil ocupacional,
+      competencias y conocimientos que fortalece en la formación de talento para la industria de software.
+    </p>
+  </header>
+
+  <main>
+    <div class="top-actions">
+      <a class="volver" href="index.html">← Volver al inicio</a>
+    </div>
+
+    <section class="card">
+      <h2>Resumen del programa</h2>
+      <p>
+        El programa ADSO del SENA prepara aprendices para participar en todo el ciclo de vida del software:
+        levantamiento y análisis de requisitos, diseño, desarrollo, pruebas, implementación y soporte inicial.
+        Su enfoque combina competencias técnicas con habilidades transversales (comunicación, ética,
+        emprendimiento, trabajo colaborativo y mejora continua).
+      </p>
+
+      <div class="datos-grid">
+        <article class="dato">
+          <h3>Nivel de formación</h3>
+          <p>Tecnólogo</p>
+        </article>
+        <article class="dato">
+          <h3>Duración de referencia</h3>
+          <p>27 meses (incluye etapa lectiva y práctica, sujeto a modalidad y convocatoria).</p>
+        </article>
+        <article class="dato">
+          <h3>Modalidades frecuentes</h3>
+          <p>Presencial y virtual, según oferta vigente por centro de formación.</p>
+        </article>
+        <article class="dato">
+          <h3>Propósito formativo</h3>
+          <p>Diseñar, construir, probar e implementar soluciones de software alineadas a necesidades reales del sector productivo.</p>
+        </article>
+        <article class="dato dato-destacado">
+          <h3>Estudia ADSO en nuestro centro de formación</h3>
+          <p><a href="https://linktr.ee/senacalatrava" target="_blank" rel="noopener noreferrer">Ir a linktr.ee/senacalatrava</a></p>
+        </article>
+      </div>
+
+      <div class="nota">
+        <strong>Importante:</strong> La duración y detalles pueden variar por actualización curricular o resolución vigente.
+        Verifica siempre la convocatoria activa del SENA antes de postularte.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Perfil ocupacional (salidas laborales)</h2>
+      <p class="perfil-intro">Al finalizar tu formación, estarás preparado para desempeñarte en roles esenciales y de alta demanda en el mundo tecnológico, tales como:</p>
+
+      <div class="perfil-grid">
+        <article class="perfil-item">
+          <h3>Desarrollador de Software Junior</h3>
+          <p>Crearás y mantendrás aplicaciones web o móviles, trabajando en la parte visual (frontend), la lógica del servidor (backend) o ambas (full stack), siempre con la guía de profesionales experimentados.</p>
+        </article>
+
+        <article class="perfil-item">
+          <h3>Analista de Requerimientos</h3>
+          <p>Ayudarás a entender las necesidades de los clientes o usuarios para traducirlas en instrucciones claras y detalladas que el equipo de desarrollo pueda construir.</p>
+        </article>
+
+        <article class="perfil-item">
+          <h3>Analista de Pruebas y Calidad (QA)</h3>
+          <p>Te encargarás de probar el software antes de que llegue al usuario final, detectando errores y asegurando que el producto funcione de manera correcta, segura y confiable.</p>
+        </article>
+
+        <article class="perfil-item">
+          <h3>Especialista en Soporte e Implementación</h3>
+          <p>Apoyarás la instalación, configuración y puesta en marcha de sistemas de software en las empresas, además de resolver dudas o problemas técnicos iniciales de los usuarios.</p>
+        </article>
+
+        <article class="perfil-item">
+          <h3>Miembro de Equipos Ágiles</h3>
+          <p>Trabajarás en equipos modernos de desarrollo (usando metodologías como Scrum), colaborando activamente en la creación de productos digitales de forma rápida, organizada y eficiente.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Recomendaciones para aspirantes</h2>
+      <ul>
+        <li>Fortalece bases de lógica y matemáticas antes de iniciar.</li>
+        <li>Practica programación constantemente con proyectos pequeños.</li>
+        <li>Construye un portafolio desde el inicio (GitHub y demos).</li>
+        <li>Participa en semilleros, retos y comunidades técnicas.</li>
+        <li>Refuerza lectura técnica en inglés para ampliar oportunidades laborales.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Competencias que desarrolla</h2>
+      <ul>
+        <li>Levantamiento, análisis y validación de requisitos del software.</li>
+        <li>Diseño de soluciones de software según procedimientos y estándares técnicos.</li>
+        <li>Construcción/implementación de software con metodologías de desarrollo.</li>
+        <li>Ejecución de pruebas y control de calidad del servicio de software.</li>
+        <li>Estructuración de propuestas técnicas de TI de acuerdo con necesidades del cliente.</li>
+        <li>Gestión básica de documentación técnica, versiones y trazabilidad.</li>
+        <li>Aplicación de buenas prácticas en seguridad, salud en el trabajo y sostenibilidad.</li>
+        <li>Comunicación efectiva, trabajo en equipo, ética profesional y cultura emprendedora.</li>
+        <li>Interacción en inglés técnico básico/intermedio para contextos laborales.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Conocimientos adquiridos durante la formación</h2>
+      <ul>
+        <li>Fundamentos de programación, lógica computacional y estructuras de control.</li>
+        <li>Modelado del sistema: casos de uso, historias de usuario y diagramación técnica.</li>
+        <li>Diseño de arquitectura básica de aplicaciones y patrones de solución.</li>
+        <li>Bases de datos: modelado, consultas y administración inicial.</li>
+        <li>Desarrollo de interfaces y servicios para aplicaciones web y empresariales.</li>
+        <li>Pruebas funcionales, reporte de defectos y criterios de aceptación.</li>
+        <li>Uso de herramientas de desarrollo, control de versiones y documentación.</li>
+        <li>Nociones de despliegue, mantenimiento y mejora continua del software.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Estructura de la ruta formativa</h2>
+      <ul>
+        <li><strong>Etapa lectiva:</strong> desarrollo de competencias técnicas y transversales mediante proyectos formativos.</li>
+        <li><strong>Etapa práctica:</strong> aplicación de lo aprendido en ambientes reales del sector productivo.</li>
+        <li><strong>Resultado esperado:</strong> egresado con capacidad de integrarse a equipos de desarrollo y aportar valor desde roles iniciales.</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Documento oficial del programa</h2>
+      <p>Puedes consultar el documento oficial del programa ADSO en Zajuna:</p>
+      <a class="btn-doc" href="https://zajuna.sena.edu.co/pdfs/titulada/tecgnologias/analisis_desarrollo_software.pdf" target="_blank" rel="noopener noreferrer">Ver PDF oficial ADSO (Zajuna)</a>
+    </section>
+
+    <section class="card cta-final">
+      <h2>¿Quieres conocer más opciones de formación?</h2>
+      <p>
+        Te invitamos a buscar más información sobre dónde estudiar y qué otros programas puedes cursar en el SENA visitando
+        <a href="https://betowa.sena.edu.co" target="_blank" rel="noopener noreferrer">betowa.sena.edu.co</a>.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 SENA - Información general del programa ADSO</p>
+  </footer>
+</body>
+</html>
