@@ -12,6 +12,7 @@
       --texto: #1f2937;
       --blanco: #ffffff;
       --azul-oscuro: #0f172a;
+      --borde-suave: #dbe5dd;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -94,6 +95,40 @@
       margin-bottom: .35rem;
     }
 
+    .respuesta-box {
+      background: #f8fff2;
+      border: 1px solid var(--borde-suave);
+      border-left: 6px solid var(--sena-verde);
+      border-radius: 12px;
+      padding: 1rem;
+      margin-top: .8rem;
+    }
+
+    .respuesta-box h3 {
+      color: #1f5e08;
+      margin-bottom: .4rem;
+      font-size: 1.05rem;
+    }
+
+    .pasos {
+      margin-top: .6rem;
+      padding-left: 1.2rem;
+      display: grid;
+      gap: .55rem;
+    }
+
+    .codigo-final {
+      margin-top: .9rem;
+      padding: .75rem;
+      border-radius: 10px;
+      background: var(--azul-oscuro);
+      color: var(--blanco);
+      text-align: center;
+      font-weight: 800;
+      letter-spacing: .12rem;
+      font-size: 1.1rem;
+    }
+
     footer {
       background: var(--azul-oscuro);
       color: #e2e8f0;
@@ -161,11 +196,24 @@
     </section>
 
     <section class="card">
-      <h2>Próximamente</h2>
-      <p>
-        Publicaremos respuestas detalladas de nuevos puzzles, retos por lenguaje y más recursos interactivos
-        para aprender programación en el contexto ADSO.
-      </p>
+      <h2>Respuestas de puzzles</h2>
+
+      <article class="respuesta-box">
+        <h3>Puzzle: Código de la caja fuerte</h3>
+        <p><strong>La solución (razonamiento mental):</strong></p>
+
+        <ol class="pasos">
+          <li>Por la pista 4 (<strong>738</strong>), eliminamos el 7, el 3 y el 8. Ya no existen.</li>
+          <li>Miramos la pista 5 (<strong>380</strong>). Como el 3 y el 8 no sirven, el 0 es correcto. La pista dice "mal colocado", por lo que el 0 no va en la tercera posición.</li>
+          <li>Miramos la pista 3 (<strong>206</strong>). Sabemos que el 6 no sirve (por la pista 4). Por lo tanto, los dos números correctos son el 2 y el 0. La pista dice "mal colocados".</li>
+          <li>El 0 está en el medio en esta pista, así que no va en la segunda posición. Como tampoco va en la tercera (paso 2), el 0 va en la primera posición. <strong>(Código: 0 _ _)</strong></li>
+          <li>El 2 está en la primera posición en esta pista, así que no va en la primera.</li>
+          <li>Miramos la pista 1 (<strong>682</strong>). El 6 y el 8 no sirven. El 2 es correcto y está "bien colocado". Como está en la tercera posición, el 2 va en la tercera posición. <strong>(Código: 0 _ 2)</strong></li>
+          <li>Miramos la pista 2 (<strong>614</strong>). El 6 no sirve. Quedan el 1 y el 4. La pista dice "un número es correcto". Si fuera el 1, estaría en la segunda posición, pero la pista dice "mal colocado", así que no puede ser el 1. Por lo tanto, el 4 es correcto. Está en la tercera posición en la pista (mal colocado), y como la primera y tercera ya están ocupadas, el 4 va en la segunda posición.</li>
+        </ol>
+
+        <div class="codigo-final">Código final: 0 4 2</div>
+      </article>
     </section>
   </main>
 
